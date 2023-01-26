@@ -8,38 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="hdC-fr-kCI">
-            <objects>
-                <viewController id="Vad-PZ-f3F" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dyT-YF-zhV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="KYf-nQ-uL9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="6s6-9u-q7V"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d1X-Ak-0b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1416" y="461"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="Mud-u7-tDQ">
-            <objects>
-                <viewController id="2gp-os-NGU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YQZ-yV-McX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="PM6-j4-kRG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="HX9-xJ-17B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2yN-g2-GfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2202" y="461"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hEu-98-cPY">
             <objects>
@@ -50,15 +18,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                         <segue destination="2gp-os-NGU" kind="relationship" relationship="viewControllers" id="w6N-kh-jeO"/>
                         <segue destination="Vad-PZ-f3F" kind="relationship" relationship="viewControllers" id="wHY-bl-zLE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj3-Z7-ell" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1748" y="-269"/>
+            <point key="canvasLocation" x="-2202" y="-270"/>
         </scene>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="idm362_amd564" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,13 +49,65 @@
                             <constraint firstItem="sPu-wJ-loO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n4y-rA-vcN"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="house.fill" catalog="system" id="uFo-wa-tRP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-865" y="-269"/>
+            <point key="canvasLocation" x="-2909" y="461"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Mud-u7-tDQ">
+            <objects>
+                <viewController id="2gp-os-NGU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YQZ-yV-McX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PM6-j4-kRG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="pencil" catalog="system" id="HX9-xJ-17B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yN-g2-GfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2202" y="461"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="hdC-fr-kCI">
+            <objects>
+                <viewController id="Vad-PZ-f3F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyT-YF-zhV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Me" translatesAutoresizingMaskIntoConstraints="NO" id="5j0-Yu-Tvz">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="BlQ-6n-qea"/>
+                                    <constraint firstAttribute="width" constant="200" id="Om5-d6-wd2"/>
+                                    <constraint firstAttribute="height" constant="200" id="dSI-Jp-rQK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="dvI-sV-QUA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KYf-nQ-uL9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5j0-Yu-Tvz" firstAttribute="centerY" secondItem="dyT-YF-zhV" secondAttribute="centerY" id="J5p-zP-Ek1"/>
+                            <constraint firstItem="5j0-Yu-Tvz" firstAttribute="centerX" secondItem="dyT-YF-zhV" secondAttribute="centerX" id="kQm-IS-fJg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="user_group_man_woman" id="6s6-9u-q7V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1X-Ak-0b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1416" y="461"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Me" width="512" height="512"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="user_group_man_woman" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
