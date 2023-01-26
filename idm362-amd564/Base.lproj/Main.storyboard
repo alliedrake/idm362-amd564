@@ -16,45 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOLLA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPu-wJ-loO">
-                                <rect key="frame" x="123.66666666666669" y="59" width="146" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREPARE TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPu-wJ-loO">
+                                <rect key="frame" x="97.666666666666686" y="108" width="198" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Iu-VP-FhK">
-                                <rect key="frame" x="40" y="134" width="100" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="tzy-Aq-Wet"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Left"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJs-QP-8wp">
-                                <rect key="frame" x="253" y="134" width="100" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ZgM-pi-FGa"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Right"/>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MWd-Ps-zvR">
-                                <rect key="frame" x="18" y="204" width="357" height="31"/>
-                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SH-Pc-JQp">
+                                <rect key="frame" x="56" y="152" width="280" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VJs-QP-8wp" secondAttribute="trailing" constant="40" id="1XP-bV-1Ca"/>
-                            <constraint firstItem="VJs-QP-8wp" firstAttribute="top" secondItem="sPu-wJ-loO" secondAttribute="bottom" constant="20" id="4xM-Sg-vND"/>
-                            <constraint firstItem="4Iu-VP-FhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5Jt-Zs-Lc3"/>
                             <constraint firstItem="sPu-wJ-loO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8iW-fC-EMW"/>
-                            <constraint firstItem="sPu-wJ-loO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q7p-4i-Z2P"/>
-                            <constraint firstItem="4Iu-VP-FhK" firstAttribute="top" secondItem="sPu-wJ-loO" secondAttribute="bottom" constant="20" id="YdO-W8-oNV"/>
-                            <constraint firstItem="VJs-QP-8wp" firstAttribute="leading" secondItem="4Iu-VP-FhK" secondAttribute="trailing" constant="113" id="bzn-UM-TZW"/>
-                            <constraint firstItem="MWd-Ps-zvR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d6b-rX-Uat"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MWd-Ps-zvR" secondAttribute="trailing" constant="20" id="kRV-Yt-6rd"/>
-                            <constraint firstItem="MWd-Ps-zvR" firstAttribute="top" secondItem="sPu-wJ-loO" secondAttribute="bottom" constant="90" id="sXm-8k-zjN"/>
+                            <constraint firstItem="sPu-wJ-loO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="Q7p-4i-Z2P"/>
                         </constraints>
                     </view>
                 </viewController>
