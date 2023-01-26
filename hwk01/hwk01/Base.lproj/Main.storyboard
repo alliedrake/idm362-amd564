@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,21 +16,242 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UpTime Interval Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTD-6B-zWX">
-                                <rect key="frame" x="68" y="59" width="257" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjO-yx-ToU">
+                                <rect key="frame" x="46" y="160" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Pde-hX-7G7"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="5" height="3"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.34248931225186563" green="0.27422607677693145" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="-">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.24432225696368282" green="0.14823615088097331" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="PREPARE TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q33-UX-Fo8">
+                                <rect key="frame" x="115.66666666666667" y="113" width="157.66666666666663" height="28"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="3" height="-1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8i-4R-4a5">
+                                <rect key="frame" x="127.66666666666667" y="260" width="133.66666666666663" height="26"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nS-pF-bJV">
+                                <rect key="frame" x="178.66666666666666" y="172" width="32" height="40"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-qY-dQM">
+                                <rect key="frame" x="277.66666666666669" y="160" width="64.333333333333314" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="e0c-jB-4Iw"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="5" height="3"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-dl-0LL">
+                                <rect key="frame" x="46" y="306" width="64" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="-">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhZ-kG-sne">
+                                <rect key="frame" x="137" y="406" width="115" height="18"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-fO-4Ab">
+                                <rect key="frame" x="277.66666666666669" y="306" width="64.333333333333314" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpO-ou-EHk">
+                                <rect key="frame" x="46" y="450" width="64" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="-">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdt-uq-mxu">
+                                <rect key="frame" x="277.66666666666669" y="450" width="64.333333333333314" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-t9-Gcg">
+                                <rect key="frame" x="175" y="463" width="34" height="38"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOLUME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wD-RS-vgu">
+                                <rect key="frame" x="46.000000000000007" y="555" width="96.666666666666686" height="29"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I8v-Hm-dfk">
+                                <rect key="frame" x="171" y="554" width="177.33333333333337" height="30"/>
+                                <color key="minimumTrackTintColor" red="0.74302292791699809" green="0.71803874063094852" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" systemColor="systemIndigoColor"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1Y-Va-mXk">
+                                <rect key="frame" x="178" y="320" width="32.666666666666657" height="36"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yUy-my-Ii2">
+                                <rect key="frame" x="297" y="603" width="51" height="31"/>
+                                <color key="onTintColor" red="0.29373661200000001" green="0.2180580157" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="DARK MODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9q-2F-HS0">
+                                <rect key="frame" x="46" y="608" width="140.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-1A-Gmy">
+                                <rect key="frame" x="127" y="683" width="135.33333333333331" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="36" name="GillSans-SemiBold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.44688997556825849" green="0.45445201050262229" blue="0.90943970343079228" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="zTD-6B-zWX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2HB-ZG-jgZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zTD-6B-zWX" secondAttribute="bottom" constant="730" id="NIB-7L-awz"/>
-                            <constraint firstItem="zTD-6B-zWX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xc8-3H-WSn"/>
-                            <constraint firstItem="zTD-6B-zWX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="usX-ja-Evo"/>
+                            <constraint firstItem="YjO-yx-ToU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="4rY-DL-edr"/>
+                            <constraint firstItem="HhZ-kG-sne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="6FQ-9K-kKn"/>
+                            <constraint firstItem="6wD-RS-vgu" firstAttribute="leading" secondItem="zpO-ou-EHk" secondAttribute="leading" id="6YR-LJ-vJU"/>
+                            <constraint firstItem="6wD-RS-vgu" firstAttribute="top" secondItem="zpO-ou-EHk" secondAttribute="bottom" constant="41" id="6dc-qv-Fso"/>
+                            <constraint firstItem="yUy-my-Ii2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q9q-2F-HS0" secondAttribute="trailing" constant="8" symbolic="YES" id="8lO-UI-UqM"/>
+                            <constraint firstItem="JP5-t9-Gcg" firstAttribute="centerX" secondItem="u1Y-Va-mXk" secondAttribute="centerX" constant="-2.3333333333333428" id="8pk-xl-s4E"/>
+                            <constraint firstItem="dCp-dl-0LL" firstAttribute="top" secondItem="YjO-yx-ToU" secondAttribute="bottom" constant="82" id="9sZ-0C-FAH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u1Y-Va-mXk" secondAttribute="bottom" constant="462" id="A7O-Uv-QZt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6wD-RS-vgu" secondAttribute="trailing" symbolic="YES" id="ApI-8Z-aHx"/>
+                            <constraint firstItem="yUy-my-Ii2" firstAttribute="centerY" secondItem="Q9q-2F-HS0" secondAttribute="centerY" id="CBh-kV-S0M"/>
+                            <constraint firstItem="dCp-dl-0LL" firstAttribute="leading" secondItem="YjO-yx-ToU" secondAttribute="leading" id="CFL-6U-h9F"/>
+                            <constraint firstItem="u1Y-Va-mXk" firstAttribute="top" secondItem="b8i-4R-4a5" secondAttribute="bottom" constant="34" id="CcQ-j8-uzw"/>
+                            <constraint firstItem="i7m-1A-Gmy" firstAttribute="top" secondItem="6wD-RS-vgu" secondAttribute="bottom" constant="99" id="EtD-KH-qlw"/>
+                            <constraint firstItem="u1Y-Va-mXk" firstAttribute="leading" secondItem="dCp-dl-0LL" secondAttribute="trailing" constant="68" id="Fnc-62-I5C"/>
+                            <constraint firstItem="Q9q-2F-HS0" firstAttribute="top" secondItem="6wD-RS-vgu" secondAttribute="bottom" constant="24" id="Git-7T-jHo"/>
+                            <constraint firstItem="I8v-Hm-dfk" firstAttribute="leading" secondItem="u1Y-Va-mXk" secondAttribute="leading" constant="-5" id="Jrs-gZ-0y0"/>
+                            <constraint firstItem="b8i-4R-4a5" firstAttribute="centerX" secondItem="7nS-pF-bJV" secondAttribute="centerX" id="KId-WL-ZNU"/>
+                            <constraint firstItem="7nS-pF-bJV" firstAttribute="centerX" secondItem="q33-UX-Fo8" secondAttribute="centerX" id="L4h-XG-7dD"/>
+                            <constraint firstItem="b8i-4R-4a5" firstAttribute="top" secondItem="7nS-pF-bJV" secondAttribute="bottom" constant="48" id="MaI-fe-XHD"/>
+                            <constraint firstItem="zpO-ou-EHk" firstAttribute="top" secondItem="dCp-dl-0LL" secondAttribute="bottom" constant="80" id="Pa9-0Y-Vq5"/>
+                            <constraint firstItem="lNi-qY-dQM" firstAttribute="baseline" secondItem="YjO-yx-ToU" secondAttribute="baseline" id="Q75-Em-gex"/>
+                            <constraint firstItem="HhZ-kG-sne" firstAttribute="centerX" secondItem="b8i-4R-4a5" secondAttribute="centerX" id="SlQ-hk-TKP"/>
+                            <constraint firstItem="HhZ-kG-sne" firstAttribute="top" secondItem="u1Y-Va-mXk" secondAttribute="bottom" constant="50" id="Ue2-Zo-lXO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YjO-yx-ToU" secondAttribute="bottom" constant="594" id="VLJ-M4-76Q"/>
+                            <constraint firstItem="u1Y-Va-mXk" firstAttribute="centerY" secondItem="dCp-dl-0LL" secondAttribute="centerY" id="W3E-54-6im"/>
+                            <constraint firstItem="lNi-qY-dQM" firstAttribute="leading" secondItem="7nS-pF-bJV" secondAttribute="trailing" constant="67" id="Wny-a3-UjU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YjO-yx-ToU" secondAttribute="trailing" constant="283" id="WxQ-7P-ymc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7nS-pF-bJV" secondAttribute="bottom" constant="606" id="X7R-vH-6ta"/>
+                            <constraint firstItem="Pdt-uq-mxu" firstAttribute="trailing" secondItem="NPA-fO-4Ab" secondAttribute="trailing" id="Y10-Ay-aee"/>
+                            <constraint firstItem="JP5-t9-Gcg" firstAttribute="centerY" secondItem="zpO-ou-EHk" secondAttribute="centerY" id="YwO-Im-kDG"/>
+                            <constraint firstItem="Q9q-2F-HS0" firstAttribute="leading" secondItem="6wD-RS-vgu" secondAttribute="leading" id="Zwo-Nh-IRd"/>
+                            <constraint firstItem="lNi-qY-dQM" firstAttribute="trailing" secondItem="q33-UX-Fo8" secondAttribute="trailing" constant="68.666666666666686" id="ari-FB-dZK"/>
+                            <constraint firstItem="zpO-ou-EHk" firstAttribute="leading" secondItem="dCp-dl-0LL" secondAttribute="leading" id="b91-89-MpS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I8v-Hm-dfk" secondAttribute="bottom" constant="235" id="bIs-fZ-uxz"/>
+                            <constraint firstItem="dCp-dl-0LL" firstAttribute="trailing" secondItem="YjO-yx-ToU" secondAttribute="trailing" id="d5w-Fz-tGZ"/>
+                            <constraint firstItem="zpO-ou-EHk" firstAttribute="trailing" secondItem="dCp-dl-0LL" secondAttribute="trailing" id="dSC-FC-9Pm"/>
+                            <constraint firstItem="7nS-pF-bJV" firstAttribute="centerY" secondItem="YjO-yx-ToU" secondAttribute="centerY" id="ep0-X0-wIK"/>
+                            <constraint firstItem="NPA-fO-4Ab" firstAttribute="trailing" secondItem="lNi-qY-dQM" secondAttribute="trailing" id="f85-jr-viK"/>
+                            <constraint firstItem="Pdt-uq-mxu" firstAttribute="top" secondItem="NPA-fO-4Ab" secondAttribute="bottom" constant="80" id="fEh-DI-ZFr"/>
+                            <constraint firstItem="NPA-fO-4Ab" firstAttribute="leading" secondItem="lNi-qY-dQM" secondAttribute="leading" id="gVq-fP-7fv"/>
+                            <constraint firstItem="I8v-Hm-dfk" firstAttribute="top" secondItem="6wD-RS-vgu" secondAttribute="top" constant="-1" id="gcN-Gh-kKl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zpO-ou-EHk" secondAttribute="bottom" constant="304" id="hjG-nR-qCt"/>
+                            <constraint firstItem="7nS-pF-bJV" firstAttribute="top" secondItem="q33-UX-Fo8" secondAttribute="bottom" constant="31" id="mQe-a8-vj5"/>
+                            <constraint firstItem="JP5-t9-Gcg" firstAttribute="top" secondItem="HhZ-kG-sne" secondAttribute="bottom" constant="39" id="nfm-rI-YEA"/>
+                            <constraint firstItem="i7m-1A-Gmy" firstAttribute="centerX" secondItem="HhZ-kG-sne" secondAttribute="centerX" id="ngI-72-f7k"/>
+                            <constraint firstItem="Pdt-uq-mxu" firstAttribute="leading" secondItem="NPA-fO-4Ab" secondAttribute="leading" id="poo-hi-2lu"/>
+                            <constraint firstItem="yUy-my-Ii2" firstAttribute="top" secondItem="I8v-Hm-dfk" secondAttribute="bottom" constant="20" id="ppx-qx-2GT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yUy-my-Ii2" secondAttribute="trailing" constant="47" id="pra-Z1-GKy"/>
+                            <constraint firstItem="q33-UX-Fo8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sKo-NJ-oAK"/>
+                            <constraint firstItem="NPA-fO-4Ab" firstAttribute="baseline" secondItem="dCp-dl-0LL" secondAttribute="baseline" id="tW1-KK-bPC"/>
+                            <constraint firstItem="u1Y-Va-mXk" firstAttribute="centerY" secondItem="NPA-fO-4Ab" secondAttribute="centerY" id="uvs-eu-WAP"/>
+                            <constraint firstItem="I8v-Hm-dfk" firstAttribute="trailing" secondItem="Pdt-uq-mxu" secondAttribute="trailing" constant="4.3333333333333712" id="v3z-nU-maM"/>
+                            <constraint firstItem="u1Y-Va-mXk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7nS-pF-bJV" secondAttribute="trailing" id="wnk-Tp-7Wn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dCp-dl-0LL" secondAttribute="bottom" constant="448" id="xDx-XQ-xDG"/>
+                            <constraint firstItem="Pdt-uq-mxu" firstAttribute="centerY" secondItem="zpO-ou-EHk" secondAttribute="centerY" id="xW5-6B-vMx"/>
+                            <constraint firstItem="HhZ-kG-sne" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-11" id="yhm-gb-Xwz"/>
+                            <constraint firstItem="I8v-Hm-dfk" firstAttribute="centerY" secondItem="6wD-RS-vgu" secondAttribute="centerY" constant="-1" id="zyc-2p-amJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,4 +260,9 @@
             <point key="canvasLocation" x="17.557251908396946" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
