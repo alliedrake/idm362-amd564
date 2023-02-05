@@ -107,15 +107,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-rn-bSZ">
-                                <rect key="frame" x="118.00000000000001" y="97" width="157.33333333333337" height="27.666666666666671"/>
+                                <rect key="frame" x="104.66666666666667" y="97" width="183.66666666666663" height="26.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyl-Eu-FSW">
-                                        <rect key="frame" x="0.0" y="0.0" width="157.33333333333334" height="27.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="26.666666666666668"/>
                                         <attributedString key="attributedText">
                                             <fragment content="PREPARE TIME">
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="23" name="GillSans-SemiBold"/>
+                                                    <font key="NSFont" size="23" name="GillSans-Bold"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -124,18 +124,18 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SB-Zq-Qwp" userLabel="Work Time">
-                                <rect key="frame" x="129.66666666666669" y="220.66666666666666" width="133.66666666666669" height="27.666666666666657"/>
+                                <rect key="frame" x="120.33333333333333" y="219.66666666666666" width="152.66666666666669" height="26.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65F-a1-OMF">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="27.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="khg-Jj-pp9" userLabel="Prepare Time">
-                                <rect key="frame" x="80.666666666666671" y="147.66666666666666" width="231.66666666666663" height="50"/>
+                                <rect key="frame" x="80.666666666666671" y="146.66666666666666" width="231.66666666666663" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnl-0k-D4w">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -164,7 +164,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Tj-iaY" userLabel="Work Time">
-                                <rect key="frame" x="80.666666666666671" y="271.33333333333331" width="231.66666666666663" height="50"/>
+                                <rect key="frame" x="80.666666666666671" y="269.33333333333331" width="231.66666666666663" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUf-iM-KhO">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -193,7 +193,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-RT-SGk" userLabel="Rest Time">
-                                <rect key="frame" x="80.666666666666671" y="395" width="231.66666666666663" height="50"/>
+                                <rect key="frame" x="80.666666666666671" y="392" width="231.66666666666663" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-Jy-lAH">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -222,29 +222,29 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLo-Lj-gkw" userLabel="Rest TIme">
-                                <rect key="frame" x="139.33333333333334" y="344.33333333333331" width="114.33333333333334" height="27.666666666666686"/>
+                                <rect key="frame" x="129.66666666666666" y="342.33333333333331" width="133.99999999999997" height="26.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-8p-vXS">
-                                        <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="27.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-tb-YbV" userLabel="Sets">
-                                <rect key="frame" x="170" y="468" width="53" height="27.666666666666686"/>
+                                <rect key="frame" x="166" y="465" width="61" height="26.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmU-ID-jgp">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="27.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="gjl-h2-p0f" userLabel="sETS">
-                                <rect key="frame" x="80.666666666666671" y="518.66666666666663" width="231.66666666666663" height="50"/>
+                                <rect key="frame" x="80.666666666666671" y="514.66666666666663" width="231.66666666666663" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnQ-hT-xY9">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -273,7 +273,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAI-Mp-ztf">
-                                <rect key="frame" x="146.66666666666666" y="611" width="100" height="50"/>
+                                <rect key="frame" x="146.66666666666666" y="608" width="100" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9L1-e3-iyl">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
