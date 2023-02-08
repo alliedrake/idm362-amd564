@@ -104,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="-2909" y="461"/>
         </scene>
-        <!--Settings-->
+        <!--Configure-->
         <scene sceneID="Mud-u7-tDQ">
             <objects>
                 <viewController id="2gp-os-NGU" sceneMemberID="viewController">
@@ -326,7 +326,7 @@
                             <constraint firstAttribute="centerX" secondItem="khg-Jj-pp9" secondAttribute="centerX" id="w9f-yN-kx5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="pencil" catalog="system" id="HX9-xJ-17B"/>
+                    <tabBarItem key="tabBarItem" title="Configure" image="pencil" catalog="system" id="HX9-xJ-17B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yN-g2-GfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
