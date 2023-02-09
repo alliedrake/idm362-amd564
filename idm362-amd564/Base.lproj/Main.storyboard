@@ -62,25 +62,18 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zd-v9-ChQ">
-                                <rect key="frame" x="171" y="618" width="51.333333333333343" height="56"/>
+                                <rect key="frame" x="165.66666666666666" y="618" width="61.666666666666657" height="56"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-FW-nfQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="bb8-32-MTe"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51.329999999999998" id="xXP-AX-zHT"/>
                                         </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="II">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="36" name="GillSans-Bold"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="plain" title="II">
+                                            <fontDescription key="titleFontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="50"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
