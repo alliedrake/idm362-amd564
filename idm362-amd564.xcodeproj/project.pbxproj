@@ -13,6 +13,7 @@
 		1411A6A02979914100FE7EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1411A69E2979914100FE7EC9 /* Main.storyboard */; };
 		1411A6A22979914300FE7EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1411A6A12979914300FE7EC9 /* Assets.xcassets */; };
 		1411A6A52979914300FE7EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1411A6A32979914300FE7EC9 /* LaunchScreen.storyboard */; };
+		14559CDD299552D90022870E /* ViewControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14559CDC299552D90022870E /* ViewControllerSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1411A6A12979914300FE7EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1411A6A42979914300FE7EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1411A6A62979914300FE7EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14559CDC299552D90022870E /* ViewControllerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				1411A69A2979914100FE7EC9 /* SceneDelegate.swift */,
 				1411A69C2979914100FE7EC9 /* ViewController.swift */,
 				1411A69E2979914100FE7EC9 /* Main.storyboard */,
+				14559CDC299552D90022870E /* ViewControllerSettings.swift */,
 				1411A6A12979914300FE7EC9 /* Assets.xcassets */,
 				1411A6A32979914300FE7EC9 /* LaunchScreen.storyboard */,
 				1411A6A62979914300FE7EC9 /* Info.plist */,
@@ -141,6 +144,7 @@
 				1411A69D2979914100FE7EC9 /* ViewController.swift in Sources */,
 				1411A6992979914100FE7EC9 /* AppDelegate.swift in Sources */,
 				1411A69B2979914100FE7EC9 /* SceneDelegate.swift in Sources */,
+				14559CDD299552D90022870E /* ViewControllerSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
