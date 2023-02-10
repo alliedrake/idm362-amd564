@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Timer"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="2gp-os-NGU" kind="relationship" relationship="viewControllers" id="w6N-kh-jeO"/>
@@ -81,7 +91,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.57615571444630798" green="0.92965667416351006" blue="0.70382797176232215" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.47188040953014232" green="0.92965667416351006" blue="0.59959885164188131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Zd-v9-ChQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="196.5" id="AHZ-ev-SdR"/>
                             <constraint firstItem="6Zd-v9-ChQ" firstAttribute="top" secondItem="Ufx-Rg-Nwm" secondAttribute="bottom" constant="29" id="Gqe-Nw-sCe"/>
@@ -92,7 +102,8 @@
                             <constraint firstItem="Ufx-Rg-Nwm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="263" id="vhR-JC-48c"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="uFo-wa-tRP">
+                    <tabBarItem key="tabBarItem" title="Timer" id="uFo-wa-tRP">
+                        <imageReference key="image" image="timer" catalog="system"/>
                         <color key="badgeColor" name="Timer"/>
                     </tabBarItem>
                 </viewController>
@@ -299,7 +310,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PM6-j4-kRG"/>
-                        <color key="backgroundColor" red="0.61130204190639503" green="0.668359435806964" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.50750732364350071" green="0.57423943234400276" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="HAI-Mp-ztf" firstAttribute="centerX" secondItem="PM6-j4-kRG" secondAttribute="centerX" id="0ws-id-VgX"/>
@@ -322,8 +333,9 @@
                             <constraint firstAttribute="centerX" secondItem="khg-Jj-pp9" secondAttribute="centerX" id="w9f-yN-kx5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Configure" image="pencil" catalog="system" id="HX9-xJ-17B">
-                        <color key="badgeColor" name="AccentColor"/>
+                    <tabBarItem key="tabBarItem" title="Configure" id="HX9-xJ-17B">
+                        <imageReference key="image" image="pencil" catalog="system" renderingMode="template"/>
+                        <color key="badgeColor" name="Timer"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yN-g2-GfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,11 +346,8 @@
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="timer" catalog="system" width="128" height="123"/>
-        <namedColor name="AccentColor">
-            <color red="0.91200000047683716" green="0.96700000762939453" blue="0.95099997520446777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Timer">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13099999725818634" green="0.13300000131130219" blue="0.13400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
