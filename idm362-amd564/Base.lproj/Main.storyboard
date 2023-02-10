@@ -17,8 +17,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                         <segue destination="2gp-os-NGU" kind="relationship" relationship="viewControllers" id="w6N-kh-jeO"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj3-Z7-ell" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2909" y="461"/>
+            <point key="canvasLocation" x="-2894" y="461"/>
         </scene>
         <!--Configure-->
         <scene sceneID="Mud-u7-tDQ">
