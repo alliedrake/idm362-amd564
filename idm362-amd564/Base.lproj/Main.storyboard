@@ -9,6 +9,11 @@
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TitilliumWeb-Regular.ttf">
+            <string>TitilliumWeb-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="hEu-98-cPY">
@@ -20,8 +25,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                         <segue destination="2gp-os-NGU" kind="relationship" relationship="viewControllers" id="w6N-kh-jeO"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                         <segue destination="Vad-PZ-f3F" kind="relationship" relationship="viewControllers" id="wHY-bl-zLE"/>
                     </connections>
                 </tabBarController>
@@ -162,14 +167,91 @@
                     <view key="view" contentMode="scaleToFill" id="YQZ-yV-McX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T8G-pq-lTk">
+                                <rect key="frame" x="20" y="99" width="353" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37e-hA-JvJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="20"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Green"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="toggleHalo:" destination="2gp-os-NGU" eventType="touchUpInside" id="I7e-Sg-hfa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-of-iKv">
+                                        <rect key="frame" x="124.33333333333334" y="0.0" width="104.33333333333334" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="20"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Alert"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showAlert:" destination="2gp-os-NGU" eventType="touchUpInside" id="UBo-ye-Ghm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-W5-Moe">
+                                        <rect key="frame" x="248.66666666666671" y="0.0" width="104.33333333333334" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="20"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="gggg"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Q1O-jf-s2f"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-Zd-fz4">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NNf-QO-SRX"/>
+                                    <constraint firstAttribute="width" constant="100" id="h2z-9n-uFo"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="people"/>
+                                <connections>
+                                    <action selector="peepBtnFun:" destination="2gp-os-NGU" eventType="touchUpInside" id="aKX-Gb-JFh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PM6-j4-kRG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u7u-Zd-fz4" firstAttribute="centerY" secondItem="YQZ-yV-McX" secondAttribute="centerY" id="80G-si-oFn"/>
+                            <constraint firstItem="T8G-pq-lTk" firstAttribute="leading" secondItem="PM6-j4-kRG" secondAttribute="leading" constant="20" id="KQY-Ct-ADQ"/>
+                            <constraint firstItem="T8G-pq-lTk" firstAttribute="top" secondItem="PM6-j4-kRG" secondAttribute="top" constant="40" id="sif-nj-Idc"/>
+                            <constraint firstItem="u7u-Zd-fz4" firstAttribute="centerX" secondItem="YQZ-yV-McX" secondAttribute="centerX" id="xJP-j5-sNQ"/>
+                            <constraint firstItem="PM6-j4-kRG" firstAttribute="trailing" secondItem="T8G-pq-lTk" secondAttribute="trailing" constant="20" id="zAv-eO-fhD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="pencil" catalog="system" id="HX9-xJ-17B"/>
+                    <connections>
+                        <outlet property="peepBtn" destination="u7u-Zd-fz4" id="haF-eP-ZUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yN-g2-GfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2202" y="461"/>
+            <point key="canvasLocation" x="-2202.290076335878" y="460.56338028169017"/>
         </scene>
         <!--About-->
         <scene sceneID="hdC-fr-kCI">
@@ -235,6 +317,7 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="people" width="30" height="30"/>
         <image name="user_group_man_woman" width="30" height="30"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.98100000619888306" blue="0.57400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,8 +325,20 @@
         <namedColor name="Prince">
             <color red="0.32400000095367432" green="0.10599999874830246" blue="0.57499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
