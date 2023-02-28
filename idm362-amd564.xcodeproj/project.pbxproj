@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14082BB329AEA7A700116C55 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 14082BB229AEA7A700116C55 /* sounds */; };
 		1411A6992979914100FE7EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411A6982979914100FE7EC9 /* AppDelegate.swift */; };
 		1411A69B2979914100FE7EC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411A69A2979914100FE7EC9 /* SceneDelegate.swift */; };
 		1411A69D2979914100FE7EC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411A69C2979914100FE7EC9 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14082BB229AEA7A700116C55 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sounds; path = "idm362-amd564/sounds"; sourceTree = SOURCE_ROOT; };
 		1411A6952979914100FE7EC9 /* idm362-amd564.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "idm362-amd564.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1411A6982979914100FE7EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1411A69A2979914100FE7EC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1411A6A32979914300FE7EC9 /* LaunchScreen.storyboard */,
 				1411A6A62979914300FE7EC9 /* Info.plist */,
 				1429E10F29AE6947000614BC /* fonts */,
+				14082BB229AEA7A700116C55 /* sounds */,
 			);
 			path = "idm362-amd564";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			files = (
 				1429E11529AE6947000614BC /* Montserrat-Bold.ttf in Resources */,
 				1429E11629AE6947000614BC /* Montserrat-ExtraBold.ttf in Resources */,
+				14082BB329AEA7A700116C55 /* sounds in Resources */,
 				1429E11729AE6947000614BC /* Montserrat-Regular.ttf in Resources */,
 				1429E11429AE6947000614BC /* Montserrat-Light.ttf in Resources */,
 				1411A6A52979914300FE7EC9 /* LaunchScreen.storyboard in Resources */,
