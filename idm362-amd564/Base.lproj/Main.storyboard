@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AKp-26-PPl">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -48,17 +48,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="idm362_amd564" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREPARE TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-hg-DBm">
-                                <rect key="frame" x="106.33333333333333" y="89" width="180.66666666666669" height="28.333333333333329"/>
+                                <rect key="frame" x="97.333333333333329" y="77" width="180.66666666666669" height="28.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ymk-6g-VO9">
-                                <rect key="frame" x="50" y="141.66666666666666" width="293" height="50"/>
+                                <rect key="frame" x="50" y="129.66666666666666" width="275" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-R1-tJI">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -80,13 +80,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-6F-BQW">
-                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <rect key="frame" x="131.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-88-fjZ">
-                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="a1g-2q-wid"/>
                                             <constraint firstAttribute="height" constant="50" id="fOh-Jd-vZU"/>
@@ -107,19 +107,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvF-eT-Gwg">
-                                <rect key="frame" x="124.00000000000001" y="221.66666666666666" width="145.33333333333337" height="28.333333333333343"/>
+                                <rect key="frame" x="115.00000000000001" y="209.66666666666666" width="145.33333333333337" height="28.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjN-6X-JJY">
-                                <rect key="frame" x="133.33333333333334" y="350" width="126.66666666666666" height="28.333333333333314"/>
+                                <rect key="frame" x="124.33333333333331" y="338" width="126.66666666666669" height="28.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0iv-g9-UW6">
-                                <rect key="frame" x="50" y="270" width="293" height="50"/>
+                                <rect key="frame" x="50" y="258" width="275" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeQ-Pi-lgS">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -137,13 +137,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x38-0d-g4T">
-                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <rect key="frame" x="131.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryt-Fv-1vF">
-                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ZWd-wE-IuE"/>
                                             <constraint firstAttribute="height" constant="50" id="kTv-TC-zSL"/>
@@ -159,7 +159,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-Mx-Bek">
-                                <rect key="frame" x="50" y="398.33333333333331" width="293" height="50"/>
+                                <rect key="frame" x="50" y="386.33333333333331" width="275" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-fl-che">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -176,13 +176,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENB-pV-cY4">
-                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <rect key="frame" x="131.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM1-FC-bU3">
-                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="4bU-Fk-0Bj"/>
                                             <constraint firstAttribute="height" constant="50" id="A8h-Hx-pzY"/>
@@ -198,7 +198,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xKO-JK-0LE">
-                                <rect key="frame" x="50" y="526.66666666666663" width="293" height="50"/>
+                                <rect key="frame" x="50" y="514.66666666666663" width="275" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-L9-bre">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -216,13 +216,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x41-K9-voM">
-                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <rect key="frame" x="131.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SK4-Rh-KS5">
-                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="57v-wO-388"/>
                                         </constraints>
@@ -238,7 +238,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alj-IG-AqF">
-                                <rect key="frame" x="121.66666666666669" y="639.66666666666663" width="150" height="60"/>
+                                <rect key="frame" x="112.66666666666669" y="599.66666666666663" width="150" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="0C2-hq-7Gv"/>
                                     <constraint firstAttribute="height" constant="60" id="0u6-8a-DxZ"/>
@@ -257,7 +257,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-Ze-lum">
-                                <rect key="frame" x="167" y="478.33333333333331" width="59" height="28.333333333333314"/>
+                                <rect key="frame" x="158" y="466.33333333333331" width="59" height="28.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -268,12 +268,12 @@
                         <constraints>
                             <constraint firstItem="Alj-IG-AqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="123-yg-CFm"/>
                             <constraint firstItem="EFN-Mx-Bek" firstAttribute="top" secondItem="RjN-6X-JJY" secondAttribute="bottom" constant="20" id="6kF-ph-5Sq"/>
+                            <constraint firstItem="Alj-IG-AqF" firstAttribute="top" secondItem="xKO-JK-0LE" secondAttribute="bottom" constant="35" id="A5E-0O-wBp"/>
                             <constraint firstItem="0iv-g9-UW6" firstAttribute="top" secondItem="LvF-eT-Gwg" secondAttribute="bottom" constant="20" id="IZW-zR-u7r"/>
                             <constraint firstItem="lgY-Ze-lum" firstAttribute="top" secondItem="EFN-Mx-Bek" secondAttribute="bottom" constant="30" id="JmX-i0-RlD"/>
                             <constraint firstItem="xKO-JK-0LE" firstAttribute="top" secondItem="lgY-Ze-lum" secondAttribute="bottom" constant="20" id="Kmh-kM-r6L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iv-g9-UW6" secondAttribute="trailing" constant="50" id="NGt-RP-krn"/>
                             <constraint firstItem="RjN-6X-JJY" firstAttribute="top" secondItem="0iv-g9-UW6" secondAttribute="bottom" constant="30" id="P0Q-na-RTh"/>
-                            <constraint firstItem="Alj-IG-AqF" firstAttribute="top" secondItem="xKO-JK-0LE" secondAttribute="bottom" constant="63" id="Q6F-T9-5Po"/>
                             <constraint firstItem="0iv-g9-UW6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Qrl-Fa-WRw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KuX-hg-DBm" secondAttribute="trailing" id="UKT-Ns-cDI"/>
                             <constraint firstItem="LvF-eT-Gwg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vqg-6p-Px9"/>
@@ -313,23 +313,27 @@
             <objects>
                 <viewController id="9i5-Vp-Vd8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KoO-eQ-KmS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Go-E4-dFo">
-                                <rect key="frame" x="127.33333333333333" y="119" width="138.66666666666669" height="31"/>
+                                <rect key="frame" x="118" y="107" width="139" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZcS-el-Lcs"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="lRK-tx-4YD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-8T-mAm">
-                                <rect key="frame" x="114.66666666666667" y="300" width="163.66666666666663" height="183"/>
+                                <rect key="frame" x="105.66666666666669" y="297" width="164" height="161"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="150"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcL-tV-EYH">
-                                <rect key="frame" x="166" y="630" width="61" height="63"/>
+                                <rect key="frame" x="157" y="602" width="61" height="63"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="| |">
                                     <fontDescription key="titleFontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="40"/>
@@ -353,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDW-TH-rUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-761.06870229007632" y="460.56338028169017"/>
+            <point key="canvasLocation" x="-762.39999999999998" y="460.11994002998506"/>
         </scene>
     </scenes>
     <resources>
