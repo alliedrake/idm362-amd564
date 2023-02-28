@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-ExtraBold.ttf">
+            <string>Montserrat-ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="hEu-98-cPY">
@@ -28,7 +36,6 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="2gp-os-NGU" kind="relationship" relationship="viewControllers" id="w6N-kh-jeO"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                     </connections>
                 </tabBarController>
@@ -44,307 +51,306 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfj-Qo-kDx">
-                                <rect key="frame" x="123.00000000000001" y="130" width="147.33333333333337" height="47.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREPARE TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-hg-DBm">
+                                <rect key="frame" x="106.33333333333333" y="89" width="180.66666666666669" height="28.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ymk-6g-VO9">
+                                <rect key="frame" x="50" y="141.66666666666666" width="293" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-JV-HnO">
-                                        <rect key="frame" x="0.0" y="0.0" width="147.33333333333334" height="47.666666666666664"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="WORK">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="41" name="GillSans-Bold"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufx-Rg-Nwm" userLabel="TIME">
-                                <rect key="frame" x="106" y="263" width="181" height="326"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-hZ-MfV">
-                                        <rect key="frame" x="0.0" y="0.0" width="181" height="326"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="181"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-R1-tJI">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="oTe-pJ-ZcI"/>
+                                            <constraint firstAttribute="height" constant="50" id="tiX-0Y-LQk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="subPrepTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmZ-lf-W93"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-6F-BQW">
+                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zd-v9-ChQ">
-                                <rect key="frame" x="165.66666666666666" y="618" width="61.666666666666657" height="56"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-FW-nfQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="56"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-88-fjZ">
+                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="bb8-32-MTe"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51.329999999999998" id="xXP-AX-zHT"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="a1g-2q-wid"/>
+                                            <constraint firstAttribute="height" constant="50" id="fOh-Jd-vZU"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="II">
-                                            <fontDescription key="titleFontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="50"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+">
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addPrepTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMc-Ug-nc1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvF-eT-Gwg">
+                                <rect key="frame" x="124.00000000000001" y="221.66666666666666" width="145.33333333333337" height="28.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjN-6X-JJY">
+                                <rect key="frame" x="133.33333333333334" y="350" width="126.66666666666666" height="28.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0iv-g9-UW6">
+                                <rect key="frame" x="50" y="270" width="293" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeQ-Pi-lgS">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2tt-hh-ue3"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="TWo-1N-wX9"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ZW6-7x-WK8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="subWorkTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iuw-tI-XIg"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x38-0d-g4T">
+                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryt-Fv-1vF">
+                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ZWd-wE-IuE"/>
+                                            <constraint firstAttribute="height" constant="50" id="kTv-TC-zSL"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+">
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addWorkTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Hu-bI-iB8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-Mx-Bek">
+                                <rect key="frame" x="50" y="398.33333333333331" width="293" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-fl-che">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qib-MK-Avl"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="bEP-d9-YvH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="subRestTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtq-kO-Cz9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENB-pV-cY4">
+                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM1-FC-bU3">
+                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="4bU-Fk-0Bj"/>
+                                            <constraint firstAttribute="height" constant="50" id="A8h-Hx-pzY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+">
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addRestTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50I-EN-2MO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xKO-JK-0LE">
+                                <rect key="frame" x="50" y="526.66666666666663" width="293" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-L9-bre">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AqP-iq-Zon"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="aLe-5v-NUt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="subSets:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fa1-8a-xiX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x41-K9-voM">
+                                        <rect key="frame" x="140.33333333333334" y="0.0" width="12.666666666666657" height="50"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SK4-Rh-KS5">
+                                        <rect key="frame" x="243" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="57v-wO-388"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                            <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addSets:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnv-6v-wwP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alj-IG-AqF">
+                                <rect key="frame" x="121.66666666666669" y="639.66666666666663" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="0C2-hq-7Gv"/>
+                                    <constraint firstAttribute="height" constant="60" id="0u6-8a-DxZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="27C-oM-mfA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="OGH-yw-sUZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="QnW-R8-Sch"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START">
+                                    <fontDescription key="titleFontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="25"/>
+                                    <color key="baseBackgroundColor" red="0.2155827582" green="0.40890172120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="9i5-Vp-Vd8" kind="presentation" id="ejV-Ph-zee"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-Ze-lum">
+                                <rect key="frame" x="167" y="478.33333333333331" width="59" height="28.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.47188040953014232" green="0.92965667416351006" blue="0.59959885164188131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.44091236589999999" green="0.58848065140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Zd-v9-ChQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="196.5" id="AHZ-ev-SdR"/>
-                            <constraint firstItem="6Zd-v9-ChQ" firstAttribute="top" secondItem="Ufx-Rg-Nwm" secondAttribute="bottom" constant="29" id="Gqe-Nw-sCe"/>
-                            <constraint firstItem="Ufx-Rg-Nwm" firstAttribute="centerX" secondItem="6Zd-v9-ChQ" secondAttribute="centerX" id="U2p-BO-m43"/>
-                            <constraint firstItem="qfj-Qo-kDx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBY-Vs-sZH"/>
-                            <constraint firstItem="qfj-Qo-kDx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="gFO-vk-JhV"/>
-                            <constraint firstItem="Ufx-Rg-Nwm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pjR-sx-E2b"/>
-                            <constraint firstItem="Ufx-Rg-Nwm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="263" id="vhR-JC-48c"/>
+                            <constraint firstItem="Alj-IG-AqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="123-yg-CFm"/>
+                            <constraint firstItem="EFN-Mx-Bek" firstAttribute="top" secondItem="RjN-6X-JJY" secondAttribute="bottom" constant="20" id="6kF-ph-5Sq"/>
+                            <constraint firstItem="0iv-g9-UW6" firstAttribute="top" secondItem="LvF-eT-Gwg" secondAttribute="bottom" constant="20" id="IZW-zR-u7r"/>
+                            <constraint firstItem="lgY-Ze-lum" firstAttribute="top" secondItem="EFN-Mx-Bek" secondAttribute="bottom" constant="30" id="JmX-i0-RlD"/>
+                            <constraint firstItem="xKO-JK-0LE" firstAttribute="top" secondItem="lgY-Ze-lum" secondAttribute="bottom" constant="20" id="Kmh-kM-r6L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iv-g9-UW6" secondAttribute="trailing" constant="50" id="NGt-RP-krn"/>
+                            <constraint firstItem="RjN-6X-JJY" firstAttribute="top" secondItem="0iv-g9-UW6" secondAttribute="bottom" constant="30" id="P0Q-na-RTh"/>
+                            <constraint firstItem="Alj-IG-AqF" firstAttribute="top" secondItem="xKO-JK-0LE" secondAttribute="bottom" constant="63" id="Q6F-T9-5Po"/>
+                            <constraint firstItem="0iv-g9-UW6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Qrl-Fa-WRw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KuX-hg-DBm" secondAttribute="trailing" id="UKT-Ns-cDI"/>
+                            <constraint firstItem="LvF-eT-Gwg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vqg-6p-Px9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xKO-JK-0LE" secondAttribute="trailing" constant="50" id="XIU-Ic-3c3"/>
+                            <constraint firstItem="xKO-JK-0LE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="XqT-ta-0Ba"/>
+                            <constraint firstItem="RjN-6X-JJY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZsM-hD-eBB"/>
+                            <constraint firstItem="ymk-6g-VO9" firstAttribute="top" secondItem="KuX-hg-DBm" secondAttribute="bottom" constant="24.333333333333329" id="am8-Hz-Hjp"/>
+                            <constraint firstItem="LvF-eT-Gwg" firstAttribute="top" secondItem="ymk-6g-VO9" secondAttribute="bottom" constant="30" id="dlX-09-mMa"/>
+                            <constraint firstItem="EFN-Mx-Bek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="eD4-u0-gfS"/>
+                            <constraint firstItem="Alj-IG-AqF" firstAttribute="centerX" secondItem="xKO-JK-0LE" secondAttribute="centerX" id="g78-y6-AlK"/>
+                            <constraint firstItem="lgY-Ze-lum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gEv-BZ-IHs"/>
+                            <constraint firstItem="ymk-6g-VO9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hSd-Wo-XSI"/>
+                            <constraint firstItem="KuX-hg-DBm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hUM-5t-eKj"/>
+                            <constraint firstItem="KuX-hg-DBm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="hoO-6G-hg6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EFN-Mx-Bek" secondAttribute="trailing" constant="50" id="qO7-lq-Xkw"/>
+                            <constraint firstItem="KuX-hg-DBm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sTV-J0-5sm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ymk-6g-VO9" secondAttribute="trailing" constant="50" id="tb0-iW-Oz2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" id="uFo-wa-tRP">
                         <imageReference key="image" image="timer" catalog="system"/>
                         <color key="badgeColor" name="Timer"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="prepareTimeLabel" destination="Z7X-6F-BQW" id="YMA-sF-mgg"/>
+                        <outlet property="restTimeLabel" destination="ENB-pV-cY4" id="rhz-sG-B57"/>
+                        <outlet property="setsLabel" destination="x41-K9-voM" id="Fno-n2-8R2"/>
+                        <outlet property="workTimeLabel" destination="x38-0d-g4T" id="8nu-G0-o8T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1521" y="461"/>
+            <point key="canvasLocation" x="-1486" y="461"/>
         </scene>
-        <!--Configure-->
-        <scene sceneID="Mud-u7-tDQ">
+        <!--View Controller-->
+        <scene sceneID="dJP-jN-WoF">
             <objects>
-                <viewController id="2gp-os-NGU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YQZ-yV-McX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <viewController id="9i5-Vp-Vd8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KoO-eQ-KmS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-rn-bSZ">
-                                <rect key="frame" x="104.66666666666667" y="97" width="183.66666666666663" height="26.666666666666671"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyl-Eu-FSW">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="26.666666666666668"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="PREPARE TIME">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="23" name="GillSans-Bold"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SB-Zq-Qwp" userLabel="Work Time">
-                                <rect key="frame" x="120.33333333333333" y="219.66666666666666" width="152.66666666666669" height="26.666666666666657"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65F-a1-OMF">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="khg-Jj-pp9" userLabel="Prepare Time">
-                                <rect key="frame" x="80.666666666666671" y="146.66666666666666" width="231.66666666666663" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnl-0k-D4w">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Ggz-UT-NgE"/>
-                                            <constraint firstAttribute="height" constant="50" id="TTE-bw-OOl"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="-"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hu-aH-UVI">
-                                        <rect key="frame" x="102.99999999999999" y="0.0" width="25.666666666666671" height="50"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7H-gE-vhp">
-                                        <rect key="frame" x="181.66666666666663" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Ieh-Wt-aZU"/>
-                                            <constraint firstAttribute="height" constant="50" id="P6R-yA-rVT"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="+"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Tj-iaY" userLabel="Work Time">
-                                <rect key="frame" x="80.666666666666671" y="269.33333333333331" width="231.66666666666663" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUf-iM-KhO">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Ws5-OT-560"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="faN-pp-dmV"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="-"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOz-I5-xkN">
-                                        <rect key="frame" x="102.99999999999999" y="0.0" width="25.666666666666671" height="50"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Man-OA-zBL">
-                                        <rect key="frame" x="181.66666666666663" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="JkS-h9-3Kk"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="gtJ-6Y-hf5"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="+"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-RT-SGk" userLabel="Rest Time">
-                                <rect key="frame" x="80.666666666666671" y="392" width="231.66666666666663" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-Jy-lAH">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="mnS-Fy-LLQ"/>
-                                            <constraint firstAttribute="height" constant="50" id="tGu-Sl-aDI"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="-"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-IP-4xW">
-                                        <rect key="frame" x="102.99999999999999" y="0.0" width="25.666666666666671" height="50"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vno-AM-sWx">
-                                        <rect key="frame" x="181.66666666666663" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="2pO-zZ-KSf"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="9si-4t-rbY"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="+"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLo-Lj-gkw" userLabel="Rest TIme">
-                                <rect key="frame" x="129.66666666666666" y="342.33333333333331" width="133.99999999999997" height="26.666666666666686"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-8p-vXS">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-tb-YbV" userLabel="Sets">
-                                <rect key="frame" x="166" y="465" width="61" height="26.666666666666686"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmU-ID-jgp">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="26.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="gjl-h2-p0f" userLabel="sETS">
-                                <rect key="frame" x="80.666666666666671" y="514.66666666666663" width="231.66666666666663" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnQ-hT-xY9">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="g31-i2-OWU"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="mV0-K8-sMZ"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="-"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-S9-fwT">
-                                        <rect key="frame" x="102.99999999999999" y="0.0" width="25.666666666666671" height="50"/>
-                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W06-7k-GH3">
-                                        <rect key="frame" x="181.66666666666663" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="BYW-GO-SG8"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="M1a-Kk-1Xj"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="+"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAI-Mp-ztf">
-                                <rect key="frame" x="146.66666666666666" y="608" width="100" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9L1-e3-iyl">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="START">
-                                                    <attributes>
-                                                        <font key="NSFont" size="23" name="GillSans-SemiBold"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="1Gw-KQ-ppW"/>
-                                    <constraint firstAttribute="height" constant="50" id="aLI-Kg-BrG"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Go-E4-dFo">
+                                <rect key="frame" x="127.33333333333333" y="119" width="138.66666666666669" height="31"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-8T-mAm">
+                                <rect key="frame" x="114.66666666666667" y="300" width="163.66666666666663" height="183"/>
+                                <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="150"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcL-tV-EYH">
+                                <rect key="frame" x="166" y="630" width="61" height="63"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="| |">
+                                    <fontDescription key="titleFontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="40"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="PM6-j4-kRG"/>
-                        <color key="backgroundColor" red="0.50750732364350071" green="0.57423943234400276" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" red="0.34248931230000002" green="0.2742260768" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="7Eg-lt-n83"/>
+                        <color key="backgroundColor" red="0.5888653398" green="0.8921858668" blue="0.6940913796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="HAI-Mp-ztf" firstAttribute="centerX" secondItem="PM6-j4-kRG" secondAttribute="centerX" id="0ws-id-VgX"/>
-                            <constraint firstItem="f8x-tb-YbV" firstAttribute="top" secondItem="fbs-RT-SGk" secondAttribute="bottom" constant="23" id="29w-S8-TZ6"/>
-                            <constraint firstItem="8SB-Zq-Qwp" firstAttribute="centerX" secondItem="YQZ-yV-McX" secondAttribute="centerX" id="2fF-iF-5jQ"/>
-                            <constraint firstItem="8EP-rn-bSZ" firstAttribute="top" secondItem="PM6-j4-kRG" secondAttribute="top" constant="38" id="6yx-cf-zlo"/>
-                            <constraint firstItem="gLo-Lj-gkw" firstAttribute="top" secondItem="qZF-Tj-iaY" secondAttribute="bottom" constant="23" id="9Bc-Wq-moe"/>
-                            <constraint firstItem="8EP-rn-bSZ" firstAttribute="centerX" secondItem="YQZ-yV-McX" secondAttribute="centerX" id="9hm-ws-IWu"/>
-                            <constraint firstItem="fbs-RT-SGk" firstAttribute="top" secondItem="gLo-Lj-gkw" secondAttribute="bottom" constant="23" id="CnK-JK-LGG"/>
-                            <constraint firstItem="f8x-tb-YbV" firstAttribute="centerX" secondItem="YQZ-yV-McX" secondAttribute="centerX" id="OrZ-Lt-c4j"/>
-                            <constraint firstItem="8SB-Zq-Qwp" firstAttribute="top" secondItem="khg-Jj-pp9" secondAttribute="bottom" constant="23" id="Pbo-cz-Gqs"/>
-                            <constraint firstItem="qZF-Tj-iaY" firstAttribute="top" secondItem="8SB-Zq-Qwp" secondAttribute="bottom" constant="23" id="YBZ-Fl-ehB"/>
-                            <constraint firstItem="khg-Jj-pp9" firstAttribute="top" secondItem="8EP-rn-bSZ" secondAttribute="bottom" constant="23.000000000000014" id="c7D-sq-yqd"/>
-                            <constraint firstItem="fbs-RT-SGk" firstAttribute="leading" secondItem="qZF-Tj-iaY" secondAttribute="leading" id="gGA-zw-fXh"/>
-                            <constraint firstItem="gLo-Lj-gkw" firstAttribute="centerX" secondItem="YQZ-yV-McX" secondAttribute="centerX" id="gIX-Cm-RmY"/>
-                            <constraint firstItem="gjl-h2-p0f" firstAttribute="top" secondItem="f8x-tb-YbV" secondAttribute="bottom" constant="23" id="kDc-Ef-c9K"/>
-                            <constraint firstItem="gjl-h2-p0f" firstAttribute="leading" secondItem="fbs-RT-SGk" secondAttribute="leading" id="lDq-4Z-kzp"/>
-                            <constraint firstItem="HAI-Mp-ztf" firstAttribute="top" secondItem="fbs-RT-SGk" secondAttribute="bottom" constant="166" id="mIS-aL-mKW"/>
-                            <constraint firstItem="qZF-Tj-iaY" firstAttribute="leading" secondItem="khg-Jj-pp9" secondAttribute="leading" id="myN-wN-x5E"/>
-                            <constraint firstAttribute="centerX" secondItem="khg-Jj-pp9" secondAttribute="centerX" id="w9f-yN-kx5"/>
+                            <constraint firstItem="7Eg-lt-n83" firstAttribute="bottom" secondItem="NcL-tV-EYH" secondAttribute="bottom" constant="90" id="4n8-iH-Jfh"/>
+                            <constraint firstItem="NcL-tV-EYH" firstAttribute="centerX" secondItem="KoO-eQ-KmS" secondAttribute="centerX" id="9Bq-cA-pp1"/>
+                            <constraint firstItem="eho-8T-mAm" firstAttribute="top" secondItem="3Go-E4-dFo" secondAttribute="bottom" constant="150" id="JYu-jT-GwI"/>
+                            <constraint firstItem="3Go-E4-dFo" firstAttribute="centerX" secondItem="KoO-eQ-KmS" secondAttribute="centerX" id="SHi-H0-RxW"/>
+                            <constraint firstItem="3Go-E4-dFo" firstAttribute="top" secondItem="7Eg-lt-n83" secondAttribute="top" constant="60" id="VmY-6Y-owW"/>
+                            <constraint firstItem="eho-8T-mAm" firstAttribute="centerY" secondItem="KoO-eQ-KmS" secondAttribute="centerY" id="odG-ac-H2d"/>
+                            <constraint firstItem="eho-8T-mAm" firstAttribute="centerX" secondItem="KoO-eQ-KmS" secondAttribute="centerX" id="sSQ-0B-5JE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Configure" id="HX9-xJ-17B">
-                        <imageReference key="image" image="pencil" catalog="system" renderingMode="template"/>
-                        <color key="badgeColor" name="Timer"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="j2f-qh-aWZ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2yN-g2-GfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDW-TH-rUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2203.8167938931297" y="460.56338028169017"/>
+            <point key="canvasLocation" x="-761.06870229007632" y="460.56338028169017"/>
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="timer" catalog="system" width="128" height="123"/>
         <namedColor name="Timer">
             <color red="0.13099999725818634" green="0.13300000131130219" blue="0.13400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
