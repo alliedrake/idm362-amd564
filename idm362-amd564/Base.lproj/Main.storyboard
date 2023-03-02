@@ -28,6 +28,7 @@
                         <segue destination="2gp-os-NGU" kind="relationship" relationship="viewControllers" id="w6N-kh-jeO"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5yd-MK-lnE"/>
                         <segue destination="Vad-PZ-f3F" kind="relationship" relationship="viewControllers" id="wHY-bl-zLE"/>
+                        <segue destination="wgi-B4-GcB" kind="relationship" relationship="viewControllers" id="7qz-0a-PJ7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cj3-Z7-ell" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,6 +286,90 @@
             </objects>
             <point key="canvasLocation" x="-1416" y="461"/>
         </scene>
+        <!--Friends-->
+        <scene sceneID="x8E-mg-acC">
+            <objects>
+                <tableViewController title="Friends" id="GAf-1j-4QS" customClass="TableViewController" customModule="idm362_amd564" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jvz-ha-jaz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7dJ-RE-qG7">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7dJ-RE-qG7" id="BP5-kr-eFP">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GAf-1j-4QS" id="Py8-CE-2YN"/>
+                            <outlet property="delegate" destination="GAf-1j-4QS" id="Pby-Cf-2cD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friends" id="vbJ-4l-Zcr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0dj-As-JWE">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addName:" destination="GAf-1j-4QS" id="r4f-gq-Xzy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="lWU-BI-CeR" kind="show" identifier="showDetail" id="wDs-N0-ysb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I4R-qb-4qZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="-270"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="DXI-Y7-eOG">
+            <objects>
+                <viewController title="Detail" id="lWU-BI-CeR" customClass="DetailsViewController" customModule="idm362_amd564" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8g-vs-QxA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big Name Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-TG-g0V">
+                                <rect key="frame" x="58" y="401.66666666666669" width="277.33333333333331" height="49"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9BW-xm-0Fx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bNu-TG-g0V" firstAttribute="centerX" secondItem="V8g-vs-QxA" secondAttribute="centerX" id="9dv-tz-1VO"/>
+                            <constraint firstItem="bNu-TG-g0V" firstAttribute="centerY" secondItem="V8g-vs-QxA" secondAttribute="centerY" id="eFB-1u-8gH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4aG-iO-XUd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3k6-Vq-gJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414.50381679389312" y="-270.42253521126764"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="fMi-Ij-QiC">
+            <objects>
+                <navigationController id="wgi-B4-GcB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" image="user_male" id="XnT-Fc-wyP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ixa-Cy-jyX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GAf-1j-4QS" kind="relationship" relationship="rootViewController" id="gfQ-1o-bjL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMj-Ei-vd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="-270"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="EFj-yW-p9y">
             <objects>
@@ -319,6 +404,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="people" width="30" height="30"/>
         <image name="user_group_man_woman" width="30" height="30"/>
+        <image name="user_male" width="30" height="30"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.98100000619888306" blue="0.57400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
