@@ -63,9 +63,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func subPrepTime(_ sender: Any) {
-        vCounter -= 1
-        prepareTimeLabel.text = String(vCounter)
-        buttonClickObj.play()
+        if vCounter >= 1 {
+            vCounter -= 1
+            prepareTimeLabel.text = String(vCounter)
+            buttonClickObj.play()
+        }
     }
     
     
@@ -77,9 +79,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func subWorkTime(_ sender: Any) {
-        vCounter -= 1
-        workTimeLabel.text = String(vCounter)
-        buttonClickObj.play()
+        if vCounter >= 1 {
+            vCounter -= 1
+            workTimeLabel.text = String(vCounter)
+            buttonClickObj.play()
+        }
     }
     
     
@@ -91,9 +95,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func subRestTime(_ sender: Any) {
-        vCounter -= 1
-        restTimeLabel.text = String(vCounter)
-        buttonClickObj.play()
+        if vCounter >= 1 {
+            vCounter -= 1
+            restTimeLabel.text = String(vCounter)
+            buttonClickObj.play()
+        }
     }
     
     
@@ -105,9 +111,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func subSets(_ sender: Any) {
-        vCounter -= 1
-        setsLabel.text = String(vCounter)
-        buttonClickObj.play()
+        if vCounter >= 1 {
+            vCounter -= 1
+            setsLabel.text = String(vCounter)
+            buttonClickObj.play()
+        }
     }
     
     
