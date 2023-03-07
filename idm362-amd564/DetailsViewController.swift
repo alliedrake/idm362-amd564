@@ -12,14 +12,16 @@ class DetailsViewController: UIViewController {
     var prepTime:String?
     var workTime:Int?
     var restTime:Int?
-    var setsNum:Int?
+    
+    var setsNum:String?
     
     var intName:String?
     
     
+    
     @IBOutlet weak var intervalName: UILabel!
     @IBOutlet weak var whatTime: UILabel!
-    
+    @IBOutlet weak var whatSet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class DetailsViewController: UIViewController {
         
         intervalName.text = intName?.uppercased()
         whatTime.text = prepTime?.uppercased()
+        whatSet.text = setsNum?.uppercased()
         
     }
     

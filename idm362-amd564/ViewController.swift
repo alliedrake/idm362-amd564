@@ -132,6 +132,7 @@ class ViewController: UIViewController {
             let detailObj = segue.destination as! DetailsViewController
             detailObj.intName = "Prepare"
             detailObj.prepTime = prepareTimeLabel.text
+            detailObj.setsNum = "0/" + (setsLabel.text ?? "")
         }
     }
     
