@@ -259,7 +259,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGQ-zs-BxD"/>
-                                    <segue destination="9i5-Vp-Vd8" kind="presentation" id="ejV-Ph-zee"/>
+                                    <segue destination="9i5-Vp-Vd8" kind="presentation" identifier="showDetail" id="ejV-Ph-zee"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-Ze-lum">
@@ -314,16 +314,16 @@
             </objects>
             <point key="canvasLocation" x="-1486" y="461"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="dJP-jN-WoF">
             <objects>
-                <viewController id="9i5-Vp-Vd8" sceneMemberID="viewController">
+                <viewController id="9i5-Vp-Vd8" customClass="DetailsViewController" customModule="idm362_amd564" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KoO-eQ-KmS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Go-E4-dFo">
-                                <rect key="frame" x="118" y="107" width="139" height="40"/>
+                                <rect key="frame" x="118.33333333333333" y="107" width="138.66666666666669" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZcS-el-Lcs"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="lRK-tx-4YD"/>
@@ -333,7 +333,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eho-8T-mAm">
-                                <rect key="frame" x="105.66666666666669" y="297" width="164" height="161"/>
+                                <rect key="frame" x="105.66666666666667" y="297" width="163.66666666666663" height="161"/>
                                 <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="150"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -360,10 +360,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j2f-qh-aWZ"/>
+                    <connections>
+                        <outlet property="curTime" destination="eho-8T-mAm" id="tQf-20-o5R"/>
+                        <outlet property="currentTime" destination="eho-8T-mAm" id="hHM-SM-uyE"/>
+                        <outlet property="intervalName" destination="3Go-E4-dFo" id="w4X-ds-qtJ"/>
+                        <outlet property="time" destination="eho-8T-mAm" id="s35-Ot-EK4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDW-TH-rUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762.39999999999998" y="460.11994002998506"/>
+            <point key="canvasLocation" x="-514" y="460"/>
         </scene>
     </scenes>
     <resources>

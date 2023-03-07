@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var restTimeLabel: UILabel!
     @IBOutlet weak var setsLabel: UILabel!
     
-    
+   
     var vCounter:Int = 0
     
     override func viewDidLoad() {
@@ -122,6 +122,17 @@ class ViewController: UIViewController {
     @IBAction func startButton(_ sender: Any) {
         print("called")
         dingAudioObj.play()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
+        
+        
+        if segue.identifier == "showDetail" {
+            let detailObj = segue.destination as! DetailsViewController
+            detailObj.intName = "Prepare"
+
+        }
     }
     
    
