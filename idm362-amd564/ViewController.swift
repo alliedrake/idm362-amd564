@@ -126,6 +126,15 @@ class ViewController: UIViewController {
     
    
     
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
+        
+        if segue.identifier == "showDetails" {
+            let detailObj = segue.destination as! DetailsViewController
+            detailObj.intName = "Prepare"
+            detailObj.prepTime = prepareTimeLabel.text
+        }
+    }
+    
     
 }
 

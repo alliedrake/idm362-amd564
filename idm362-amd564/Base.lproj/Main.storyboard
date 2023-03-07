@@ -259,7 +259,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGQ-zs-BxD"/>
-                                    <segue destination="9i5-Vp-Vd8" kind="presentation" id="ejV-Ph-zee"/>
+                                    <segue destination="9i5-Vp-Vd8" kind="presentation" identifier="showDetails" id="ejV-Ph-zee"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-Ze-lum">
@@ -314,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="-1486" y="461"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="dJP-jN-WoF">
             <objects>
-                <viewController id="9i5-Vp-Vd8" sceneMemberID="viewController">
+                <viewController id="9i5-Vp-Vd8" customClass="DetailsViewController" customModule="idm362_amd564" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KoO-eQ-KmS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,6 +360,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j2f-qh-aWZ"/>
+                    <connections>
+                        <outlet property="intervalName" destination="3Go-E4-dFo" id="Fkw-Sj-yLy"/>
+                        <outlet property="whatTime" destination="eho-8T-mAm" id="eno-Ci-Mb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDW-TH-rUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
