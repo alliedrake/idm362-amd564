@@ -295,13 +295,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7dJ-RE-qG7">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7dJ-RE-qG7" customClass="CustomTableViewCell" customModule="idm362_amd564" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="40.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7dJ-RE-qG7" id="BP5-kr-eFP">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="40.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="176" translatesAutoresizingMaskIntoConstraints="NO" id="rf5-L0-nsn">
+                                            <rect key="frame" x="20" y="10.000000000000002" width="353" height="20.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCO-jG-8Om">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="20.666666666666668"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="4fV-5l-Hdu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNU-PC-cxp">
+                                                    <rect key="frame" x="276" y="0.0" width="77" height="20.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="rf5-L0-nsn" secondAttribute="trailing" constant="20" id="5ZS-ME-BbA"/>
+                                        <constraint firstItem="rf5-L0-nsn" firstAttribute="top" secondItem="BP5-kr-eFP" secondAttribute="top" constant="10" id="e3y-Pa-KJx"/>
+                                        <constraint firstAttribute="bottom" secondItem="rf5-L0-nsn" secondAttribute="bottom" constant="10" id="jOf-8d-45G"/>
+                                        <constraint firstItem="rf5-L0-nsn" firstAttribute="leading" secondItem="BP5-kr-eFP" secondAttribute="leading" constant="20" id="oi8-Dd-gEU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fName" destination="RCO-jG-8Om" id="5qV-El-KHc"/>
+                                    <outlet property="fNumStr" destination="BNU-PC-cxp" id="yaz-qH-xw8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -348,6 +380,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4aG-iO-XUd"/>
+                    <connections>
+                        <outlet property="bigName" destination="bNu-TG-g0V" id="eES-rs-4a9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3k6-Vq-gJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

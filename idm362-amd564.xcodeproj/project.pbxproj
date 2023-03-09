@@ -28,6 +28,8 @@
 		14F1C99129A7B54B00F4DFF0 /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14F1C98629A7B54B00F4DFF0 /* TitilliumWeb-Italic.ttf */; };
 		14F1C99229A7B54B00F4DFF0 /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14F1C98729A7B54B00F4DFF0 /* TitilliumWeb-Light.ttf */; };
 		14F1C99429A7B8D900F4DFF0 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 14F1C99329A7B8D900F4DFF0 /* sounds */; };
+		14F2969729BA288600B4BE0B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F2969629BA288600B4BE0B /* CustomTableViewCell.swift */; };
+		14F2969A29BA2DBC00B4BE0B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14F2969829BA2DBC00B4BE0B /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		14F1C98629A7B54B00F4DFF0 /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
 		14F1C98729A7B54B00F4DFF0 /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
 		14F1C99329A7B8D900F4DFF0 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sounds; path = "idm362-amd564/sounds"; sourceTree = SOURCE_ROOT; };
+		14F2969629BA288600B4BE0B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		14F2969929BA2DBC00B4BE0B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				1411A69A2979914100FE7EC9 /* SceneDelegate.swift */,
 				1411A69C2979914100FE7EC9 /* ViewController.swift */,
 				1411A69E2979914100FE7EC9 /* Main.storyboard */,
+				14F2969829BA2DBC00B4BE0B /* Model.xcdatamodeld */,
+				14F2969629BA288600B4BE0B /* CustomTableViewCell.swift */,
 				14EC093729B0F01E00EA177B /* TableViewController.swift */,
 				14559CDC299552D90022870E /* ViewControllerSettings.swift */,
 				1411A6A12979914300FE7EC9 /* Assets.xcassets */,
@@ -206,6 +212,8 @@
 				1411A69D2979914100FE7EC9 /* ViewController.swift in Sources */,
 				1411A6992979914100FE7EC9 /* AppDelegate.swift in Sources */,
 				1411A69B2979914100FE7EC9 /* SceneDelegate.swift in Sources */,
+				14F2969A29BA2DBC00B4BE0B /* Model.xcdatamodeld in Sources */,
+				14F2969729BA288600B4BE0B /* CustomTableViewCell.swift in Sources */,
 				14EC093829B0F01E00EA177B /* TableViewController.swift in Sources */,
 				14559CDD299552D90022870E /* ViewControllerSettings.swift in Sources */,
 				14EC093A29B1000800EA177B /* DetailsViewController.swift in Sources */,
@@ -424,6 +432,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14F2969829BA2DBC00B4BE0B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14F2969929BA2DBC00B4BE0B /* Model.xcdatamodel */,
+			);
+			currentVersion = 14F2969929BA2DBC00B4BE0B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1411A68D2979914100FE7EC9 /* Project object */;
 }

@@ -17,6 +17,7 @@ class DetailsViewController: UIViewController {
     var incomingName:String?
     
     
+    @IBOutlet weak var bigName: UILabel!
     
     
     
@@ -24,7 +25,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        bigName.text = incomingName?.uppercased()
+       bigName.text = incomingName?.uppercased()
     }
     
     

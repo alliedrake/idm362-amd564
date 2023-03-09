@@ -6,8 +6,7 @@
 //
 
 import UIKit
-
-
+import CoreData
 
 class TableViewController: UITableViewController {
     
@@ -15,8 +14,9 @@ class TableViewController: UITableViewController {
     
     var fNames: [String] = ["Judith", "Jennifa", "John", "Joseph", "Jervis"]
     
+    // Link Person core data to peopleObj (Model)
+    var peopleObj: [NSManagedObject] = []
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +25,30 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        //Step 1
+        let managedContent = appDelegate.persistentContainer.viewContext
+        
+        //Step 2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
+        
+        //Step 3
+        
+        do {
+            peopleObj = try managedContent.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        
     }
 
     // MARK: - Table view data source
@@ -36,15 +60,25 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return fNames.count
+//        return fNames.count
+        
+        return peopleObj.count
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = fNames[indexPath.row]
+//        cell.textLabel?.text = fNames[indexPath.row]
+//        cell.fName.text = fNames[indexPath.row]
+        
+        let personObj = peopleObj[indexPath.row]
+        cell.fName?.text = personObj.value(forKey: "name") as? String
+        
+        let rNum = Int.random(in: 1...100)
+        // Use this code in your beta
+        cell.fNumStr?.text = String(rNum)
 
         return cell
     }
@@ -59,13 +93,36 @@ class TableViewController: UITableViewController {
         return true
     }
     */
+    
+    //Define context
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete from array
-            fNames.remove(at: indexPath.row)
+//            fNames.remove(at: indexPath.row)
+            
+            // extract person from CoreData
+            let onePerson = peopleObj[indexPath.row]
+            // Delete that person from context
+            context.delete(onePerson)
+            // Save context back to CoreData
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            // Get fresh data
+            do {
+                peopleObj = try context.fetch(Person.fetchRequest())
+                print("Person Name fetched done.." + String(peopleObj.count))
+            } catch {
+                print("Person Fetch failed")
+            }
+            
+            
+            
+            
+            
             // Reload table
             tableView.reloadData()
         }
@@ -99,7 +156,11 @@ class TableViewController: UITableViewController {
                 return
             }
             // Update array with new name
-            self.fNames.append(nameToSave)
+//            self.fNames.append(nameToSave)
+            
+            self.saveToCore(name: nameToSave)
+            
+            
             // Reload table
             self.tableView.reloadData()
         }
@@ -113,6 +174,27 @@ class TableViewController: UITableViewController {
         present(alertObj, animated: true)
     }
     
+    func saveToCore(name: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContent = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContent)!
+        
+        let personObj = NSManagedObject(entity: entity, insertInto: managedContent)
+        
+        
+        // target ONE person in entity
+        personObj.setValue(name, forKey: "name")
+        
+        do {
+            try managedContent.save()
+            peopleObj.append(personObj)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
     
     
 // When the user selects a row, pass that info on to the detail view

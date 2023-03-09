@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  idm362-amd564
+//  TempProject
 //
-//  Created by Allison Drake on 1/19/23.
+//  Created by Allison Drake on 3/9/23.
 //
 
 import UIKit
 import CoreData
-
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,8 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    
+
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -43,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Model")
+        let container = NSPersistentContainer(name: "TempProject")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -78,7 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 
 }
 
