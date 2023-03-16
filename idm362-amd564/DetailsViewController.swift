@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
     var restTimeInt:Int?
     
     var setsNum:String?
-    var setsNumInt:Int?
+    var rounds_remaining:Int?
     
     var intName:String?
     
@@ -67,7 +67,7 @@ class DetailsViewController: UIViewController {
         runTimer()
         
         phase = "prepare"
-        setsNumInt = Int(setsNum!)
+        rounds_remaining = Int(setsNum!)
 
         // Do any additional setup after loading the view.
         
@@ -79,41 +79,62 @@ class DetailsViewController: UIViewController {
     //Update timer
     @objc func updateTimer() {
         
+        whatTime.text = "\(String(current_time!))"
+        
+//        print("rounds remaining is " + String(rounds_remaining!))
+//        print("work time is " + String(workTimeInt!))
+//        print("phase is " + phase)
+//        print("current time is " + String(current_time!))
+        
         // Check if current_time hits 0, then switch to other times
         if (current_time! > 0) {
             current_time! -= 1     //This will decrement(count down)the current_time.
-            whatTime.text = "\(String(current_time!))" //This will update the label.
+           
+          
         } else {
             // Find out what phase is and put in switch code
             switch (phase) {
+                
             case "prepare":
+                print("case:prepare")
                 phase = "work"
-//                setsNumInt! -= 1
                 current_time = workTimeInt
-                whatTime.text = "\(String(current_time!))"
+                rounds_remaining! -= 1
                 intervalName.text = "WORK"
-                print("phase has changed to work")
+                self.view.backgroundColor = UIColor.yellow
+                break
             case "work":
-                if (current_time == 0) {
-                    phase = "rest"
+                print("case:work")
+                if (current_time! > 0) {
+//                    intervalName.text = "DONE!"
+                    intervalName.text = "WORK"
+                } else {
                     current_time = restTimeInt
-                    whatTime.text = "\(String(current_time!))"
+                    phase = "rest"
                     intervalName.text = "REST"
-                    print("phase has changed to rest")
+//                    print("phase has changed to rest")
                     self.view.backgroundColor = UIColor.red
                 }
-//            case "rest":
-//                if (current_time == 0) {
-//                    setsNumInt! -= 1
-//                    phase = "work"
-//                }
                 break
+            case "rest":
+                print("case:rest")
+                if (current_time! > 0) {
+                } else {
+                    rounds_remaining! -= 1
+                    whatSet.text = "\(String(rounds_remaining!))"
+                    current_time = workTimeInt
+                    phase = "work"
+                    self.view.backgroundColor = UIColor.green
+                }
+                break
+            
             default:
-                intervalName.text = "DONE!"
-                print("timer has ran out")
+                print("did it break?")
+                
             }
         }
-    } // Update timer end
+    }
+// Update timer end
     
     
     

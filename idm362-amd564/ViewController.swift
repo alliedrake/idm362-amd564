@@ -22,7 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var setsLabel: UILabel!
     
     
-    var vCounter:Int = 0
+    var prepCounter:Int = 1
+    var workCounter:Int = 1
+    var restCounter:Int = 1
+    var setCounter:Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,64 +61,64 @@ class ViewController: UIViewController {
     
     
     @IBAction func addPrepTime(_ sender: Any) {
-        vCounter += 1
-        prepareTimeLabel.text = String(vCounter)
+        prepCounter += 1
+        prepareTimeLabel.text = String(prepCounter)
         buttonClickObj.play()
     }
     
     
     @IBAction func subPrepTime(_ sender: Any) {
-        if vCounter >= 1 {
-            vCounter -= 1
-            prepareTimeLabel.text = String(vCounter)
+        if prepCounter >= 1 {
+            prepCounter -= 1
+            prepareTimeLabel.text = String(prepCounter)
             buttonClickObj.play()
         }
     }
     
     
     @IBAction func addWorkTime(_ sender: Any) {
-        vCounter += 1
-        workTimeLabel.text = String(vCounter)
+        workCounter += 1
+        workTimeLabel.text = String(workCounter)
         buttonClickObj.play()
     }
     
     
     @IBAction func subWorkTime(_ sender: Any) {
-        if vCounter >= 1 {
-            vCounter -= 1
-            workTimeLabel.text = String(vCounter)
+        if workCounter >= 1 {
+            workCounter -= 1
+            workTimeLabel.text = String(workCounter)
             buttonClickObj.play()
         }
     }
     
     
     @IBAction func addRestTime(_ sender: Any) {
-        vCounter += 1
-        restTimeLabel.text = String(vCounter)
+        restCounter += 1
+        restTimeLabel.text = String(restCounter)
         buttonClickObj.play()
     }
     
     
     @IBAction func subRestTime(_ sender: Any) {
-        if vCounter >= 1 {
-            vCounter -= 1
-            restTimeLabel.text = String(vCounter)
+        if restCounter >= 1 {
+            restCounter -= 1
+            restTimeLabel.text = String(restCounter)
             buttonClickObj.play()
         }
     }
     
     
     @IBAction func addSets(_ sender: Any) {
-        vCounter += 1
-        setsLabel.text = String(vCounter)
+        setCounter += 1
+        setsLabel.text = String(setCounter)
         buttonClickObj.play()
     }
     
     
     @IBAction func subSets(_ sender: Any) {
-        if vCounter >= 1 {
-            vCounter -= 1
-            setsLabel.text = String(vCounter)
+        if setCounter >= 1 {
+            setCounter -= 1
+            setsLabel.text = String(setCounter)
             buttonClickObj.play()
         }
     }
@@ -141,7 +144,7 @@ class ViewController: UIViewController {
             detailObj.prepTimeInt = Int(prepareTimeLabel.text!)
             detailObj.workTimeInt = Int(workTimeLabel.text!)
             detailObj.restTimeInt = Int(restTimeLabel.text!)
-            detailObj.setsNumInt =  Int(setsLabel.text ?? "")
+            detailObj.rounds_remaining =  Int(setsLabel.text ?? "")
         }
     }
     
