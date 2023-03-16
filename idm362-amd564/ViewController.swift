@@ -12,6 +12,8 @@ var dingAudioObj = AVAudioPlayer()
 var buttonClickObj = AVAudioPlayer()
 
 class ViewController: UIViewController {
+  
+
     
     
     @IBOutlet weak var prepareTimeLabel: UILabel!
@@ -119,6 +121,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     @IBAction func startButton(_ sender: Any) {
         print("called")
         dingAudioObj.play()
@@ -126,13 +129,19 @@ class ViewController: UIViewController {
     
    
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
         
         if segue.identifier == "showDetails" {
             let detailObj = segue.destination as! DetailsViewController
             detailObj.intName = "Prepare"
             detailObj.prepTime = prepareTimeLabel.text
-            detailObj.setsNum = "0/" + (setsLabel.text ?? "")
+            detailObj.setsNum = setsLabel.text
+            // Before we call other view, we convert string to int
+            detailObj.prepTimeInt = Int(prepareTimeLabel.text!)
+            detailObj.workTimeInt = Int(workTimeLabel.text!)
+            detailObj.restTimeInt = Int(restTimeLabel.text!)
+            detailObj.setsNumInt =  Int(setsLabel.text ?? "")
         }
     }
     
