@@ -27,6 +27,8 @@ class DetailsViewController: UIViewController {
     
     var phase = "stopped"
     
+    var remaining:String = "Remaining"
+    
    
 
     
@@ -45,18 +47,18 @@ class DetailsViewController: UIViewController {
     
     
     
-    var resumeTapped = false
+//    var resumeTapped = false
 
-    @IBAction func pauseButton(_ sender: UIButton) {
-        if self.resumeTapped == false {
-                          timer.invalidate()
-                          self.resumeTapped = true
-                     } else {
-                          runTimer()
-                          self.resumeTapped = false
-                     }
-
-    }
+//    @IBAction func pauseButton(_ sender: UIButton) {
+//        if self.resumeTapped == false {
+//                          timer.invalidate()
+//                          self.resumeTapped = true
+//                     } else {
+//                          runTimer()
+//                          self.resumeTapped = false
+//                     }
+//
+//    }
     
     
     override func viewDidLoad() {
