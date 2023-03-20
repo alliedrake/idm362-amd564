@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
     var restTimeInt:Int?
     
     var setsNum:String?
-    var setsNumInt:Int?
+    var rounds_remaining:Int?
     
     var intName:String?
     
@@ -67,7 +67,7 @@ class DetailsViewController: UIViewController {
         runTimer()
         
         phase = "prepare"
-        setsNumInt = Int(setsNum!)
+        rounds_remaining = Int(setsNum!)
 
         // Do any additional setup after loading the view.
         
@@ -79,40 +79,56 @@ class DetailsViewController: UIViewController {
     //Update timer
     @objc func updateTimer() {
         
-        // Check if current_time hits 0, then switch to other times
-        if (current_time! > 0) {
-            current_time! -= 1     //This will decrement(count down)the current_time.
-            whatTime.text = "\(String(current_time!))" //This will update the label.
-        } else {
-            // Find out what phase is and put in switch code
-            switch (phase) {
-            case "prepare":
-                phase = "work"
-//                setsNumInt! -= 1
-                current_time = workTimeInt
-                whatTime.text = "\(String(current_time!))"
-                intervalName.text = "WORK"
-                print("phase has changed to work")
-            case "work":
-                if (current_time == 0) {
-                    phase = "rest"
-                    current_time = restTimeInt
+        // Display count down time
+        whatTime.text = "\(String(current_time!))"
+          
+          // Check if current_time hits 0, then switch to other times
+          if (current_time! >= 0) {
+          
+              // Count down timer update
+              current_time! -= 1     //This will decrement(count down)the current_time.
+
+          } else {
+              // Find out what phase is and put in switch code
+              switch (phase) {
+                  
+              case "prepare":
+                  print("case:prepare")
+                  phase = "work"
+                  current_time = workTimeInt
+                  intervalName.text = "WORK"
+                  whatTime.text = "\(String(current_time!))"
+                  self.view.backgroundColor = UIColor(named: "GreenColor")
+                  break
+              case "work":
+                  print("case:work")
+                  phase = "rest"
+                  current_time = restTimeInt
+                  intervalName.text = "REST"
+                  whatTime.text = "\(String(current_time!))"
+                  self.view.backgroundColor = UIColor(named:"RedColor")
+                  break
+              case "rest":
+                  print("case:rest")
+                  phase = "work"
+                  if (rounds_remaining! > 0) {
+                    rounds_remaining! -= 1
+                    whatSet.text = "\(String(rounds_remaining!))"
+                    current_time = workTimeInt
+                    intervalName.text = "WORK"
                     whatTime.text = "\(String(current_time!))"
-                    intervalName.text = "REST"
-                    print("phase has changed to rest")
-                    self.view.backgroundColor = UIColor.red
-                }
-//            case "rest":
-//                if (current_time == 0) {
-//                    setsNumInt! -= 1
-//                    phase = "work"
-//                }
-                break
-            default:
-                intervalName.text = "DONE!"
-                print("timer has ran out")
-            }
-        }
+                      self.view.backgroundColor = UIColor(named: "GreenColor")
+                  } else if (rounds_remaining == 0) {
+                    print("DONE - Turn OFF Count Down Timer")
+                      phase = "stopped"
+                      whatTime.text = "0"
+                      intervalName.text = "DONE!"
+                  }
+                  break
+              default:
+                  print("did it break?")
+              }
+          }
     } // Update timer end
     
     
