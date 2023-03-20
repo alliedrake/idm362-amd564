@@ -145,7 +145,7 @@ class ViewController: UIViewController {
             detailObj.prepTimeInt = Int(prepareTimeLabel.text!)
             detailObj.workTimeInt = Int(workTimeLabel.text!)
             detailObj.restTimeInt = Int(restTimeLabel.text!)
-            detailObj.rounds_remaining =  Int(setsLabel.text ?? "")
+            detailObj.rounds_remaining =  Int(setsLabel.text ?? "LEFT")
         }
     }
     
