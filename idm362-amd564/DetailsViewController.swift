@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFAudio
 
 class DetailsViewController: UIViewController {
     
@@ -29,7 +30,7 @@ class DetailsViewController: UIViewController {
     
     var remaining:String = "Remaining"
     
-   
+    var dingAudioObj = AVAudioPlayer()
 
     
        var timer = Timer()
@@ -64,6 +65,20 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // prep sound
+        let dingSound = Bundle.main.path(forResource: "sounds/ding-sound-effect", ofType: "mp3")
+        
+        do {
+            dingAudioObj = try
+            AVAudioPlayer(contentsOf: URL(fileURLWithPath: dingSound!))
+            dingAudioObj.prepareToPlay()
+            print("sound file is loaded")
+        }
+        catch {
+            print(error)
+        }
+        
+        
         current_time = prepTimeInt//This variable will hold a starting value of current_time. It could be any amount above 0.
         
         runTimer()
@@ -82,7 +97,9 @@ class DetailsViewController: UIViewController {
     @objc func updateTimer() {
         
         // Display count down time
-        whatTime.text = "\(String(current_time!))"
+        if (current_time! >= 0) {
+            whatTime.text = "\(String(current_time!))"
+        }
           
           // Check if current_time hits 0, then switch to other times
           if (current_time! >= 0) {
@@ -91,6 +108,7 @@ class DetailsViewController: UIViewController {
               current_time! -= 1     //This will decrement(count down)the current_time.
 
           } else {
+              
               // Find out what phase is and put in switch code
               switch (phase) {
                   
@@ -101,10 +119,12 @@ class DetailsViewController: UIViewController {
                   intervalName.text = "WORK"
                   whatTime.text = "\(String(current_time!))"
                   self.view.backgroundColor = UIColor(named: "GreenColor")
+                  dingAudioObj.play()
                   break
               case "work":
                   print("case:work")
                   phase = "rest"
+                  dingAudioObj.play()
                   current_time = restTimeInt
                   intervalName.text = "REST"
                   whatTime.text = "\(String(current_time!))"
@@ -119,13 +139,15 @@ class DetailsViewController: UIViewController {
                     current_time = workTimeInt
                     intervalName.text = "WORK"
                     whatTime.text = "\(String(current_time!))"
-                      self.view.backgroundColor = UIColor(named: "GreenColor")
+                    self.view.backgroundColor = UIColor(named: "GreenColor")
                   } else if (rounds_remaining == 0) {
                     print("DONE - Turn OFF Count Down Timer")
-                      phase = "stopped"
-                      whatTime.text = "0"
-                      intervalName.text = "DONE!"
+                      timer.invalidate()
+//                      phase = "stopped"
+//                      whatTime.text = "0"
+//                      intervalName.text = "DONE!"
                   }
+                  dingAudioObj.play()
                   break
               default:
                   print("did it break?")
