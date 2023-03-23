@@ -31,6 +31,7 @@ class DetailsViewController: UIViewController {
     var remaining:String = "Remaining"
     
     var dingAudioObj = AVAudioPlayer()
+ 
 
     
        var timer = Timer()
@@ -46,6 +47,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var whatTime: UILabel!
     @IBOutlet weak var whatSet: UILabel!
     
+    @IBOutlet weak var howMany: UILabel!
     
     
 //    var resumeTapped = false
@@ -77,6 +79,7 @@ class DetailsViewController: UIViewController {
         catch {
             print(error)
         }
+
         
         
         current_time = prepTimeInt//This variable will hold a starting value of current_time. It could be any amount above 0.
@@ -91,10 +94,12 @@ class DetailsViewController: UIViewController {
         intervalName.text = intName?.uppercased()
         whatTime.text = prepTime?.uppercased()
         whatSet.text = setsNum?.uppercased()
+        howMany.text = setsNum?.uppercased()
     }
     
     //Update timer
     @objc func updateTimer() {
+        
         
         // Display count down time
         if (current_time! >= 0) {
@@ -139,15 +144,14 @@ class DetailsViewController: UIViewController {
                     current_time = workTimeInt
                     intervalName.text = "WORK"
                     whatTime.text = "\(String(current_time!))"
+                    dingAudioObj.play()
                     self.view.backgroundColor = UIColor(named: "GreenColor")
                   } else if (rounds_remaining == 0) {
                     print("DONE - Turn OFF Count Down Timer")
                       timer.invalidate()
-//                      phase = "stopped"
-//                      whatTime.text = "0"
-//                      intervalName.text = "DONE!"
+                      whatTime.text = "0"
+                      intervalName.text = "SWIPE DOWN!"
                   }
-                  dingAudioObj.play()
                   break
               default:
                   print("did it break?")

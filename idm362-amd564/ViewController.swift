@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     var restCounter:Int = 1
     var setCounter:Int = 1
     
-    var remaining:String = "Remaining"
+//    var remaining:String = "Remaining"
     
     
     override func viewDidLoad() {
@@ -147,7 +147,7 @@ class ViewController: UIViewController {
             detailObj.prepTimeInt = Int(prepareTimeLabel.text!)
             detailObj.workTimeInt = Int(workTimeLabel.text!)
             detailObj.restTimeInt = Int(restTimeLabel.text!)
-            detailObj.rounds_remaining = Int(setsLabel.text! + "\(remaining)")  
+            detailObj.rounds_remaining = Int(setsLabel.text! + "\("remaining")")  
             
             
             
